@@ -4,7 +4,11 @@ def view():
     pass
 
 def add():
-    pass
+    name = input("Account Name: ")
+    pwd = input("Password: ")
+
+    with open('accounts.txt', 'a') as f:
+        
 
 while True:
     mode = input("What you like, to add a new password or view existing ones(add, view), press q to quit").lower()
@@ -12,9 +16,9 @@ while True:
         break
 
     if mode == "view":
-        pass
+        view()
     elif mode == "add":
-        pass
+        add()
     else:
         print("Invalid.")
         continue
